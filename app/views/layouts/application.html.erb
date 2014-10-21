@@ -9,11 +9,10 @@
 <body>
 
   <% if current_user %>
-    <%= link_to destroy_user_session_path, method: :delete %>
+    <%= link_to 'logout', destroy_user_session_path, method: :delete %>
   <% else %>
     <%= link_to 'Log in', new_user_session_path %>
     <%= link_to 'Sign Up', new_user_registration_path %>
-
   <% end %>
 
 <%= yield %>
